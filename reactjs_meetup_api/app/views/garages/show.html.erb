@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @garage.location %>
+</p>
+
+<p>
+  <strong>Daily price cents:</strong>
+  <%= @garage.daily_price_cents %>
+</p>
+
+<%= link_to 'Edit', edit_garage_path(@garage) %> |
+<%= link_to 'Back', garages_path %>
