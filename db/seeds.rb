@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Owner.destroy_all
+Car.destroy_all
+Garage.destroy_all
+
+25.times do
+  o = Fabricate :owner
+  g = Fabricate :garage
+  c = Fabricate(:car, owner_id: o.id, garage_id: g.id)
+end
