@@ -5,6 +5,7 @@ class GaragesController < ApplicationController
   # GET /garages.json
   def index
     @garages = Garage.all
+    render json: @garages, status: 200
   end
 
   # GET /garages/1

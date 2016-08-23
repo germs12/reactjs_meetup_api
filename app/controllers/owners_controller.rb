@@ -5,6 +5,7 @@ class OwnersController < ApplicationController
   # GET /owners.json
   def index
     @owners = Owner.all
+    render json: @owners, status: 200
   end
 
   # GET /owners/1
