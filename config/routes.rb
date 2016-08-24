@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :surfboards
   resources :cars
   resources :owners
   resources :garages
