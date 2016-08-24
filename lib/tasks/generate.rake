@@ -1,6 +1,6 @@
-namespace :yeoman do
+namespace :react_meetup do
   desc 'Expire accreditations over 90 days'
-  task :generate_angular_crud_pages => :environment do
+  task :generate => :environment do
     tmp = []
     tables = ActiveRecord::Base.connection.tables
     tables.each do |table|
@@ -57,7 +57,7 @@ namespace :yeoman do
       tmp << tmp_result
     end
 
-    File.open('yeoman_generators.md', 'w') do |file|
+    File.open('generator_arguments.txt', 'w') do |file|
       tmp.each do |class_generator|
         # file.write('```' + "\r\n" + class_generator[0].strip + ' "' + class_generator[1].strip + '" "' + class_generator[2].strip + '"' + "\r\n" + '```' + "\r\n")
         tmp_output = "\r\nyo ims-v-5 " + class_generator[0].strip + ' "' + class_generator[1].strip + '" "' + class_generator[2].strip + '" '
