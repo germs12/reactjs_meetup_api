@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @surfboard.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @surfboard.color %>
+</p>
+
+<p>
+  <strong>Length in cm:</strong>
+  <%= @surfboard.length_in_cm %>
+</p>
+
+<%= link_to 'Edit', edit_surfboard_path(@surfboard) %> |
+<%= link_to 'Back', surfboards_path %>
